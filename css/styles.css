@@ -39,3 +39,25 @@
     transition: 0.3s ease-in-out;
 }
 
+@media (max-width: 768px) {
+  .hero {
+    height: 400px; /* Reducir la altura en pantallas más pequeñas */
+    padding: 20px; /* Agregar un poco de padding para que el contenido no esté tan pegado a los bordes */
+  }
+  
+  .hero-titulo {
+    font-size: 30px; /* Reducir el tamaño de fuente del título */
+    margin: 5px; /* Ajustar el margen del título */
+  }
+  
+  .hero-parrafo {
+    font-size: 20px; /* Reducir el tamaño de fuente del párrafo */
+    margin: 10px; /* Ajustar el margen del párrafo */
+    margin-bottom: 40px; /* Reducir el margen inferior */
+  }
+  
+  .hero-ancla {
+    font-size: 18px; /* Reducir el tamaño de fuente del enlace */
+    padding: 20px; /* Reducir el padding del botón */
+  }
+}
