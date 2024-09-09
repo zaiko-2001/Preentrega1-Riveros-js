@@ -9,7 +9,7 @@ botonesCarrito.forEach((boton) => {
 function agregarAlCarrito(event) {
   const productoId = event.target.getAttribute("data-id");
   const productoNombre = event.target.getAttribute("data-nombre");
-  const productoPrecio = parseFloat(event.target.getAttribute("data-precio"));
+  const productoPrecio = parseInt(event.target.getAttribute("data-precio"));
 
   const producto = {
     id: productoId,
@@ -41,8 +41,10 @@ function actualizarCarrito() {
     const productoElement = document.createElement("div");
     productoElement.classList.add("d-flex", "justify-content-between", "mb-2");
     productoElement.innerHTML = `
-            <span>${item.nombre} (x${item.cantidad})</span>
-            <span><strong>$${(item.precio * item.cantidad).toFixed(2)}</strong></span>
+            <span>${item.nombre} <strong>(${item.cantidad}un.)</strong></span>
+            <span><strong>$${(item.precio * item.cantidad).toFixed(
+              2
+            )}</strong></span>
         `;
     carritoItems.appendChild(productoElement);
 
